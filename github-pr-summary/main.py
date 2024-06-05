@@ -19,6 +19,8 @@ EMAIL_FROM = 'miiguelb07@gmail.com'
 EMAIL_TO = 'miiguelb07@gmail.com'
 EMAIL_SUBJECT = f'Weekly Pull Request Summary for {REPO_NAME}'
 
-def main():
+def fetch_pull_requests(state):
     # instructions fetch the pr
-
+    params = {
+        
+    }
