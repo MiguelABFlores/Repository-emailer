@@ -22,5 +22,7 @@ EMAIL_SUBJECT = f'Weekly Pull Request Summary for {REPO_NAME}'
 def fetch_pull_requests(state):
     # instructions fetch the pr
     params = {
-        
+        'state': state,
+        'sort': 'created',
+        'since': LAST_WEEK,
     }
