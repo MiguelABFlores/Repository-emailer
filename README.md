@@ -14,3 +14,5 @@ Dependencies needed:
 # Sources
 
 - [using-github-api-in-python](https://thepythoncode.com/article/using-github-api-in-python)
+- [GitHub API Docs](https://docs.github.com/en/rest/pulls?apiVersion=2022-11-28)
+- [GitHub API Docs PR](https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests)
