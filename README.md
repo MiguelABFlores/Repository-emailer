@@ -15,5 +15,6 @@ Dependencies needed:
 
 - [using-github-api-in-python](https://thepythoncode.com/article/using-github-api-in-python)
 - [Isoformat() Method Of Datetime Class In Python](https://www.geeksforgeeks.org/isoformat-method-of-datetime-class-in-python/)
+- [Python DateTime – Timedelta Class](https://www.geeksforgeeks.org/python-datetime-timedelta-class/?ref=lbp)
 - [GitHub API Docs](https://docs.github.com/en/rest/pulls?apiVersion=2022-11-28)
 - [GitHub API Docs PR](https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests)
