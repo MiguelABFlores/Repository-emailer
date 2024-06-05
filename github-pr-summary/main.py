@@ -32,4 +32,13 @@ def fetch_pull_requests(state):
     }
     response = requests.get(GITHUB_API_URL, params=params) #Do the GET request to the GITHUB_API_URL provided in the parameters
     response.raise_for_status() # Error status if not fetching correctly
-    return response.json() # Return the Json from the API
+    return response.json() # Return the Json from the API of the pull requests
+
+# Fetching the json from the repository and calling the function
+opened_prs = fetch_pull_requests('open')
+closed_prs = fetch_pull_requests('closed')
+# We create one list with the open and closed prs in the retrieved json
+# Each list comes in form of a list of dictionaries, so it is possible to combine them
+# We just need to concatenate open and closed lists with +
+all_prs = opened_prs + closed_prs
+
