@@ -13,7 +13,8 @@ GITHUB_API_URL = f'https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls'
 # https://api.github.com/repos/huggingface/text-generation-inference/pulls
 # Getting the json from this we can see what to expect from different parameters
 # PR for testing: https://github.com/huggingface/text-generation-inference/pull/1985
-LAST_WEEK = (datetime.now() - timedelta(days=7)).isoformat() # ISOFORMAT https://www.geeksforgeeks.org/isoformat-method-of-datetime-class-in-python/
+LAST_WEEK = (datetime.now() - timedelta(days = 7)).isoformat() # ISOFORMAT
+# The ISO format helps to add the date in digits for easier handling
 
 # Email Information for the Scrum Master
 EMAIL_FROM = 'miiguelb07@gmail.com'
@@ -24,12 +25,11 @@ EMAIL_SUBJECT = f'Weekly PR Summary for {REPO_NAME}'
 def fetch_pull_requests(state):
     # Basic fetch parameters
     params = {
-        'state': state,
-        'sort': 'created',
-        'direction': 'desc',
+        'state': state, # can be open or closed
+        'sort': 'created', # sort by creation time
+        'direction': 'desc', # sort in descending order
         'since': LAST_WEEK,
     }
-    #
-    response = requests.get(GITHUB_API_URL, params=params)
-    response.raise_for_status()
-    return response.json()
+    response = requests.get(GITHUB_API_URL, params=params) #Do the GET request to the GITHUB_API_URL provided in the parameters
+    response.raise_for_status() # Error status if not fetching correctly
+    return response.json() # Return the Json from the API
