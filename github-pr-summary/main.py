@@ -13,8 +13,8 @@ GITHUB_API_URL = f'https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls'
 LAST_WEEK = (datetime.now() - timedelta(days=7)).isoformat()
 
 # Email Information for the Scrum Master
-EMAIL_FROM = 'noreply@yourcompany.com'
-EMAIL_TO = 'manager@yourcompany.com'
+EMAIL_FROM = 'miiguelb07@gmail.com'
+EMAIL_TO = 'miiguelb07@gmail.com'
 EMAIL_SUBJECT = f'Weekly Pull Request Summary for {REPO_NAME}'
 
 def main():
