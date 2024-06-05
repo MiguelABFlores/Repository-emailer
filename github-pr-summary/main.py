@@ -24,5 +24,9 @@ def fetch_pull_requests(state):
     params = {
         'state': state,
         'sort': 'created',
+        'direction': 'desc',
         'since': LAST_WEEK,
     }
+    response = requests.get(GITHUB_API_URL, params=params)
+    response.raise_for_status()
+    return response.json()
