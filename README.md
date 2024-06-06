@@ -32,8 +32,15 @@ Definition of Done:
 Dependencies needed:
 
 - requests
+
   ```
   pip3 install PyGithub requests
+  ```
+
+  or
+
+  ```
+  brew install python-requests
   ```
 
 # Sources
