@@ -8,11 +8,13 @@ from datetime import datetime, timedelta # Library used to use easier date and t
 REPO_OWNER = 'huggingface'
 REPO_NAME = 'text-generation-inference'
 GITHUB_API_URL = f'https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls'
-# Chosen public active repository
-# https://github.com/huggingface/text-generation-inference
-# https://api.github.com/repos/huggingface/text-generation-inference/pulls
-# Getting the json from this we can see what to expect from different parameters
-# PR for testing: https://github.com/huggingface/text-generation-inference/pull/1985
+'''
+Chosen public active repository
+https://github.com/huggingface/text-generation-inference
+https://api.github.com/repos/huggingface/text-generation-inference/pulls
+Getting the json from this we can see what to expect from different parameters
+PR for testing: https://github.com/huggingface/text-generation-inference/pull/1985
+'''
 LAST_WEEK = (datetime.now() - timedelta(days = 7)).isoformat() # ISOFORMAT
 # The ISO format helps to add the date in digits for easier handling
 
@@ -37,6 +39,7 @@ def fetch_pull_requests(state):
 # Fetching the json from the repository and calling the function
 opened_prs = fetch_pull_requests('open')
 closed_prs = fetch_pull_requests('closed')
+
 # We create one list with the open and closed prs in the retrieved json
 # Each list comes in form of a list of dictionaries, so it is possible to combine them
 # We just need to concatenate open and closed lists with +
