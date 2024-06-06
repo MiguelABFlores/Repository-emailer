@@ -2,7 +2,7 @@
 
 Project to retrieve from the GitHub API the data needed to summarize the pull requests from a public repository, after data has been retrieved it will generate a report and send it to the email of a scrum master.
 
-# Instructions
+# Task Instructions
 
 Using the language of your choice, write code that will use the GitHub API to retrieve a summary of all opened, closed, and in progress pull requests in the last week for a given repository and print an email summary report that might be sent to a manager or Scrum-master. Choose any public target GitHub repository you like that has had at least 3 pull requests in the last week. Format the content email as you see fit, with the goal to allow the reader to easily digest the events of the past week. Please print to console the details of the email you would send (From, To, Subject, Body). As part of the submission, you are welcome to create a Dockerfile to build an image that will run the program, however, other ways of implementing this is acceptable.
 
@@ -17,6 +17,15 @@ Definition of Done:
 - [ ] Your code should be configurable when it runs. Use your judgement on what needs to be configurable.
 
 - [ ] Your solution describes how this would be run to produce regular reports.
+
+# Files and Folder Structure Explanation
+
+1. **`main.py`**: The main script that coordinates fetching the pull requests and formatting the email body for the project.
+2. **`github_api.py`**: Contains the function to fetch the pull requests from the GitHub API.
+3. **`email_formatter.py`**: Contains the function to format the pull request data into an email body.
+4. **`config.py`**: Holds configuration values: repository owner, repository name, email details, etc.
+5. **`Dockerfile`**: File used to create the Docker image, it includes everything needed to setting up the Python environment and running the main script.
+6. **`requirements.txt`**: Here are the Python libraries that need to be installed in the Docker image.
 
 # Requirements
 
