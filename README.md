@@ -73,7 +73,9 @@ Definition of Done:
     ```bash
     0 0 * * * docker run --rm github-pr-summary
     ```
+
     or
+
     ```bash
     0 0 * * * docker run --rm -e REPO_OWNER=someowner -e REPO_NAME=repositoryname -e EMAIL_FROM=someonesemailfrom@example.com -e EMAIL_TO=someonesemailto@example.com -e EMAIL_SUBJECT="Some Public Repository Weekly PR Summary" github-pr-summary
     ```
