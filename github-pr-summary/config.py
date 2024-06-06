@@ -2,12 +2,12 @@
 import os
 
 # Repository Configuration details
-REPO_OWNER = os.getenv('huggingface')
-REPO_NAME = os.getenv('text-generation-inference')
+REPO_OWNER = os.getenv('REPO_OWNER', 'huggingface')
+REPO_NAME = os.getenv('REPO_NAME', 'text-generation-inference')
 
 # Email Information for the Scrum Master
-EMAIL_FROM = os.getenv('no-reply@someemail.com')
-EMAIL_TO = os.getenv('tosomeone@someemail.com')
+EMAIL_FROM = os.getenv('EMAIL_FROM', 'no-reply@someemail.com')
+EMAIL_TO = os.getenv('EMAIL_TO', 'tosomeone@someemail.com')
 EMAIL_SUBJECT = os.getenv('EMAIL_SUBJECT', f'Weekly PR Summary for {REPO_NAME}')
 
 '''
