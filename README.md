@@ -8,11 +8,11 @@ Using the language of your choice, write code that will use the GitHub API to re
 
 Definition of Done:
 
-- [ x ] Your code demonstrates use of variables, looping structures, and control structures
+- [x] Your code demonstrates use of variables, looping structures, and control structures
 
 - [ ] Your code prints a user-friendly summary of open, merged, and closed pull requests including counts of PRs as well as their titles. Use your judgement on what you think is important information.
 
-- [ x ] Your code is able to be run/compiled without errors
+- [x] Your code is able to be run/compiled without errors
 
 - [ ] Your code should be configurable when it runs. Use your judgement on what needs to be configurable.
 
