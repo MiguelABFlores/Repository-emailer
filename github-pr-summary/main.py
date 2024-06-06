@@ -58,10 +58,20 @@ prs_last_week = [pr for pr in all_prs if datetime.strptime(pr['created_at'], '%Y
 # Format the email body with the pull requests count
 # To count the number of items we are just using len which calculates the length of a list given
 # So we are just pointing to the lists of opened and closed prs
-email_body = f"Weekly Pull Request Summary for {REPO_NAME}\n\n"
+email_body = f"Weekly Pull Request Summary for {REPO_NAME} repository\n\n"
 email_body += f"Total PRs opened in the last week: {len(opened_prs)}\n"
 email_body += f"Total PRs closed in the last week: {len(closed_prs)}\n\n"
 
+# List all the opened Pull Requests
+# Here we are iterating item by item and add to the body the parameters we are looking for from the GitHub API
+# I want to make it as a list so it will be initiated with a -
+email_body += "Opened Pull Requests:\n"
+for pr in opened_prs:
+    email_body += f"- {pr['title']} by {pr['user']['login']} (#{pr['number']})\n"
+
+email_body += "\nClosed Pull Requests:\n"
+for pr in closed_prs:
+    email_body += f"- {pr['title']} by {pr['user']['login']} (#{pr['number']})\n"
 
 # Printing the email content to console
 print("From:", EMAIL_FROM)
