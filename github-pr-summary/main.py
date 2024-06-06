@@ -56,9 +56,14 @@ we will be having a list of, for example 10
 prs_last_week = [pr for pr in all_prs if datetime.strptime(pr['created_at'], '%Y-%m-%dT%H:%M:%SZ') > datetime.now() - timedelta(days=7)]
 
 # Format the email body with the pull requests count
+# To count the number of items we are just using len which calculates the length of a list given
+# So we are just pointing to the lists of opened and closed prs
 email_body = f"Weekly Pull Request Summary for {REPO_NAME}\n\n"
+email_body += f"Total PRs opened in the last week: {len(opened_prs)}\n"
+email_body += f"Total PRs closed in the last week: {len(closed_prs)}\n\n"
 
-# Printing email content to console
+
+# Printing the email content to console
 print("From:", EMAIL_FROM)
 print("To:", EMAIL_TO)
 print("Subject:", EMAIL_SUBJECT)
