@@ -17,8 +17,8 @@ LAST_WEEK = (datetime.now() - timedelta(days = 7)).isoformat() # ISOFORMAT
 # The ISO format helps to add the date in digits for easier handling
 
 # Email Information for the Scrum Master
-EMAIL_FROM = 'miiguelb07@gmail.com'
-EMAIL_TO = 'miiguelb07@gmail.com'
+EMAIL_FROM = 'no-reply@someemail.com'
+EMAIL_TO = 'tosomeone@someemail.com'
 EMAIL_SUBJECT = f'Weekly PR Summary for {REPO_NAME}'
 
 # Main Function to fetch the Pull Requests from the repository
@@ -42,3 +42,5 @@ closed_prs = fetch_pull_requests('closed')
 # We just need to concatenate open and closed lists with +
 all_prs = opened_prs + closed_prs
 
+# Separate all the PRs, we are getting only the Last Week PRs as requested
+prs_last_week = []
