@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN pip install --no-cache-dir requests
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Working directory to the folder containing main.py
 WORKDIR /usr/src/app/github-pr-summary
