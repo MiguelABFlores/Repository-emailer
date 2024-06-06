@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: github-pr-summary
+spec:
+  schedule: "0 0 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: github-pr-summary
+            image: artifactory.somedns.com/docker-repo/path/to/artifact/github-pr-summary:latest
+            imagePullPolicy: IfNotPresent
+            env:
+            - name: REPO_OWNER
+              value: "someowner"
+            - name: REPO_NAME
+              value: "repositoryname"
+            - name: EMAIL_FROM
+              value: "someonesemailfrom@example.com"
+            - name: EMAIL_TO
+              value: "someonesemailto@example.com"
+            - name: EMAIL_SUBJECT
+              value: "Some Public Repository Weekly PR Summary"
+          restartPolicy: OnFailure
+          imagePullSecrets:
+          - name: artifactory-secret
