@@ -52,6 +52,12 @@ Definition of Done:
    docker run --rm github-pr-summary
    ```
 
+4. **Run the Docker container with environment variables:**
+
+   ```bash
+   docker run --rm -e REPO_OWNER=someowner -e REPO_NAME=repositoryname -e EMAIL_FROM=someonesemailfrom@example.com -e EMAIL_TO=someonesemailto@example.com -e EMAIL_SUBJECT="Some Public Repository Weekly PR Summary" github-pr-summary
+   ```
+
 # Python Requirements
 
 Dependencies needed:
