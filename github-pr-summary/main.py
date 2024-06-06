@@ -67,11 +67,11 @@ email_body += f"Total PRs closed in the last week: {len(closed_prs)}\n\n"
 # I want to make it as a list so it will be initiated with a -
 email_body += "Opened Pull Requests:\n"
 for pr in opened_prs:
-    email_body += f"- title: {pr['title']} | by: {pr['user']['login']} | number: (#{pr['number']})\n"
+    email_body += f"- title: {pr['title']} | by: {pr['user']['login']} | number: #{pr['number']}\n"
 
 email_body += "\nClosed Pull Requests:\n"
 for pr in closed_prs:
-    email_body += f"- {pr['title']} by {pr['user']['login']} (#{pr['number']})\n"
+    email_body += f"- title: {pr['title']} | by: {pr['user']['login']} | number: #{pr['number']}\n"
 
 # Printing the email content to console
 print("From:", EMAIL_FROM)
