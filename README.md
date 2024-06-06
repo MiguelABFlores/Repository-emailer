@@ -20,10 +20,10 @@ Definition of Done:
 
 # Files and Folder Structure Explanation
 
-1. **`main.py`**: The main script that coordinates fetching the pull requests and formatting the email body for the project.
-2. **`github_api.py`**: Contains the function to fetch the pull requests from the GitHub API.
-3. **`email_formatter.py`**: Contains the function to format the pull request data into an email body.
-4. **`config.py`**: Holds configuration values: repository owner, repository name, email details, etc.
+1. **`/github-pr-summary/main.py`**: The main script that coordinates fetching the pull requests and formatting the email body for the project.
+2. **`/github-pr-summary/github_api.py`**: Contains the function to fetch the pull requests from the GitHub API.
+3. **`/github-pr-summary/email_formatter.py`**: Contains the function to format the pull request data into an email body.
+4. **`/github-pr-summary/config.py`**: Holds configuration values: repository owner, repository name, email details, etc.
 5. **`Dockerfile`**: File used to create the Docker image, it includes everything needed to setting up the Python environment and running the main script.
 6. **`requirements.txt`**: Here are the Python libraries that need to be installed in the Docker image.
 
