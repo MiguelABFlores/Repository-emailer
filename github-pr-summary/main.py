@@ -57,3 +57,9 @@ prs_last_week = [pr for pr in all_prs if datetime.strptime(pr['created_at'], '%Y
 
 # Format the email body with the pull requests count
 email_body = f"Weekly Pull Request Summary for {REPO_NAME}\n\n"
+
+# Printing email content to console
+print("From:", EMAIL_FROM)
+print("To:", EMAIL_TO)
+print("Subject:", EMAIL_SUBJECT)
+print("\nBody:\n", email_body)
