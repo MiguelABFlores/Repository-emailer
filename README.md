@@ -14,9 +14,9 @@ Definition of Done:
 
 - [x] Your code is able to be run/compiled without errors
 
-- [ ] Your code should be configurable when it runs. Use your judgement on what needs to be configurable.
+- [x] Your code should be configurable when it runs. Use your judgement on what needs to be configurable.
 
-- [ ] Your solution describes how this would be run to produce regular reports.
+- [x] Your solution describes how this would be run to produce regular reports.
 
 # Files and Folder Structure Explanation
 
