@@ -70,33 +70,33 @@ Definition of Done:
 
 **Create a cronjob in the terminal and add the docker run to the instruction**
 
-    ```bash
-    0 0 * * * docker run --rm github-pr-summary
-    ```
+```bash
+0 0 * * * docker run --rm github-pr-summary
+```
 
-    or
+or
 
-    ```bash
-    0 0 * * * docker run --rm -e REPO_OWNER=someowner -e REPO_NAME=repositoryname -e EMAIL_FROM=someonesemailfrom@example.com -e EMAIL_TO=someonesemailto@example.com -e EMAIL_SUBJECT="Some Public Repository Weekly PR Summary" github-pr-summary
-    ```
+```bash
+0 0 * * * docker run --rm -e REPO_OWNER=someowner -e REPO_NAME=repositoryname -e EMAIL_FROM=someonesemailfrom@example.com -e EMAIL_TO=someonesemailto@example.com -e EMAIL_SUBJECT="Some Public Repository Weekly PR Summary" github-pr-summary
+```
 
 ## Scheduling in Kubernetes
 
 **Create a Kubernetes secret for your Artifactory credentials:**
 
-    ```bash
-    kubectl create secret docker-registry artifactory-secret \
-      --docker-server=artifactory.somedns.com \
-      --docker-username=<artifactory-username> \
-      --docker-password=<artifactory-password> \
-      --docker-email=<email>
-    ```
+```bash
+kubectl create secret docker-registry artifactory-secret \
+  --docker-server=artifactory.somedns.com \
+  --docker-username=<artifactory-username> \
+  --docker-password=<artifactory-password> \
+  --docker-email=<email>
+```
 
 **Apply the CronJob to your Kubernetes cluster:**
 
-    ```bash
-    kubectl apply -f scheduling/github-pr-summary-cronjob.yaml
-    ```
+```bash
+kubectl apply -f scheduling/github-pr-summary-cronjob.yaml
+```
 
 # Python Requirements
 
