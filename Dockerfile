@@ -1,9 +1,9 @@
-FROM 
+FROM python:3.9-slim
 
-WORKDIR
+WORKDIR /usr/src/app
 
-COPY
+COPY . .
 
-RUN
+RUN pip install --no-cache-dir requests
 
-CMD
+CMD ["pyhton", "/github-pr-summary/main.py"]
