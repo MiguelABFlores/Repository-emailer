@@ -25,7 +25,7 @@ EMAIL_SUBJECT = f'Weekly PR Summary for {REPO_NAME}'
 def fetch_pull_requests(state):
     # Basic fetch parameters
     params = {
-        'state': state, # can be open or closed
+        'state': state, # can be open, merged or closed
         'sort': 'created', # sort by creation time
         'direction': 'desc', # sort in descending order
         'since': LAST_WEEK,
@@ -43,4 +43,11 @@ closed_prs = fetch_pull_requests('closed')
 all_prs = opened_prs + closed_prs
 
 # Separate all the PRs, we are getting only the Last Week PRs as requested
-prs_last_week = []
+'''
+First we will make the iterations and then the conditions that should be met
+Then we will iterate item to item in the previously created combined list 'all_prs'
+*When iterating we are adding all the prs that are within a week from todays date (7 days), others are discarded
+By the end of the list we will have filtered all the prs that are 1 week old, so instead of having a thousand list
+we will be having a list of, for example 10
+'''
+prs_last_week = [pr for pr in all_prs if datetime.strptime(pr['created_at'], '%Y-%m-%dT%H:%M:%SZ') > datetime.now() - timedelta(days=7)]
