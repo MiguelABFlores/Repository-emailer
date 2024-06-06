@@ -9,13 +9,6 @@ LAST_WEEK = (datetime.now() - timedelta(days = 7)).isoformat() # ISOFORMAT
 # Main Function to fetch the Pull Requests from the repository
 def fetch_pull_requests(repo_owner, repo_name, state):
     github_api_url = f'https://api.github.com/repos/{repo_owner}/{repo_name}/pulls'
-    '''
-    Chosen public active repository
-    https://github.com/huggingface/text-generation-inference
-    https://api.github.com/repos/huggingface/text-generation-inference/pulls
-    Getting the json from this we can see what to expect from different parameters
-    PR for testing: https://github.com/huggingface/text-generation-inference/pull/1985
-    '''
     # Basic fetch parameters
     params = {
         'state': state, # can be open, merged or closed
