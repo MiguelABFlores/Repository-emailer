@@ -7,9 +7,12 @@ def main():
     # Fetching the json from the repository and calling the function
     opened_prs = fetch_pull_requests(REPO_OWNER, REPO_NAME, 'open')
     closed_prs = fetch_pull_requests(REPO_OWNER, REPO_NAME, 'closed')
+    # Filter of the merged PR's and the closed ones
+    merged_prs = [pr for pr in closed_prs if pr['merged_at'] is not None]
+    closed_prs = [pr for pr in closed_prs if pr['merged_at'] is None]
 
     # Format the email body with the pull request data
-    email_body = format_email_body(REPO_NAME, opened_prs, closed_prs)
+    email_body = format_email_body(REPO_NAME, opened_prs, merged_prs, closed_prs)
 
     # Printing the email content to console
     print("From:", EMAIL_FROM)
