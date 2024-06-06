@@ -16,3 +16,6 @@ def main():
     print("To:", EMAIL_TO)
     print("Subject:", EMAIL_SUBJECT)
     print("\nBody:\n", email_body)
+
+if __name__ == "__main__":
+    main()
