@@ -54,3 +54,6 @@ By the end of the list we will have filtered all the prs that are 1 week old, so
 we will be having a list of, for example 10
 '''
 prs_last_week = [pr for pr in all_prs if datetime.strptime(pr['created_at'], '%Y-%m-%dT%H:%M:%SZ') > datetime.now() - timedelta(days=7)]
+
+# Format the email body with the pull requests count
+email_body = f"Weekly Pull Request Summary for {REPO_NAME}\n\n"
