@@ -64,9 +64,9 @@ Definition of Done:
 
 **Edit the crontab**
 
-    ```bash
-    crontab -e
-    ```
+```bash
+ crontab -e
+```
 
 **Create a cronjob in the terminal and add the docker run to the instruction**
 
