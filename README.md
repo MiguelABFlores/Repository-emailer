@@ -52,7 +52,7 @@ Definition of Done:
    docker run --rm github-pr-summary
    ```
 
-# Requirements
+# Python Requirements
 
 Dependencies needed:
 
