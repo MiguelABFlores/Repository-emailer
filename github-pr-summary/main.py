@@ -1,4 +1,3 @@
-# Main File: The main script that coordinates fetching the pull requests and formatting the email body for the project
 # Libraries and dependencies, required installations will be added when creating the Docker Image
 import requests # Library used to handle http requests for the API
 # pip3 install PyGithub requests
