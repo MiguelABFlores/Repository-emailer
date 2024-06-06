@@ -68,10 +68,12 @@ email_body += f"Total PRs closed in the last week: {len(closed_prs)}\n\n"
 email_body += "Opened Pull Requests:\n"
 for pr in opened_prs:
     email_body += f"- title: {pr['title']} | by: {pr['user']['login']} | number: #{pr['number']}\n"
+    email_body += f"  url: {pr['html_url']}\n"
 
 email_body += "\nClosed Pull Requests:\n"
 for pr in closed_prs:
     email_body += f"- title: {pr['title']} | by: {pr['user']['login']} | number: #{pr['number']}\n"
+    email_body += f"  url: {pr['html_url']}\n"
 
 # Printing the email content to console
 print("From:", EMAIL_FROM)
