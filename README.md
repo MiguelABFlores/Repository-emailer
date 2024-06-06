@@ -27,19 +27,44 @@ Definition of Done:
 5. **`Dockerfile`**: File used to create the Docker image, it includes everything needed to setting up the Python environment and running the main script.
 6. **`requirements.txt`**: Here are the Python libraries that need to be installed in the Docker image.
 
+# Prerequisites
+
+- Docker or Rancher installed on your machine.
+
+### Steps
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/MiguelABFlores/repository-emailer.git
+   cd github-pr-summary
+   ```
+
+2. **Build the Docker image:**
+
+   ```bash
+   docker build -t github-pr-summary .
+   ```
+
+3. **Run the Docker container:**
+
+   ```bash
+   docker run --rm github-pr-summary
+   ```
+
 # Requirements
 
 Dependencies needed:
 
 - requests
 
-  ```
+  ```bash
   pip3 install PyGithub requests
   ```
 
   or
 
-  ```
+  ```bash
   brew install python-requests
   ```
 
