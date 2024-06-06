@@ -6,4 +6,8 @@ COPY . .
 
 RUN pip install --no-cache-dir requests
 
-CMD ["pyhton", "/github-pr-summary/main.py"]
+# Working directory to the folder containing main.py
+WORKDIR /usr/src/app/github-pr-summary
+
+# Run the script
+CMD ["python", "./main.py"]
