@@ -31,7 +31,12 @@ Definition of Done:
 
 # Diagrams for Strategy and Code Structure
 
+## Strategy Diagram
+
 ![Strategy Diagram](diagrams/repository-emailer-strategy.drawio.png)
+
+## Code Structure Diagram
+
 ![Code Structure Diagram](diagrams/repository-emailer.drawio.png)
 
 # Prerequisites
