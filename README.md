@@ -42,8 +42,10 @@ Definition of Done:
 # Prerequisites
 
 - Docker or Rancher installed on your machine.
+  or
+- Python 3.12
 
-### Steps
+### Steps Docker
 
 1. **Clone the repository:**
 
@@ -68,6 +70,33 @@ Definition of Done:
 
    ```bash
    docker run --rm -e REPO_OWNER=someowner -e REPO_NAME=repositoryname -e EMAIL_FROM=someonesemailfrom@example.com -e EMAIL_TO=someonesemailto@example.com -e EMAIL_SUBJECT="Some Public Repository Weekly PR Summary" github-pr-summary
+   ```
+
+### Steps Python
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/MiguelABFlores/repository-emailer.git
+   cd github-pr-summary
+   ```
+
+2. **Install Python dependencies:**
+
+   ```bash
+   pip3 install PyGithub requests
+   ```
+
+   or
+
+   ```bash
+   brew install python-requests
+   ```
+
+3. **Run the main python script:**
+
+   ```bash
+   python3 github-pr-summary/main.py
    ```
 
 # Scheduling
