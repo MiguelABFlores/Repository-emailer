@@ -42,7 +42,9 @@ Definition of Done:
 # Prerequisites
 
 - Docker or Rancher installed on your machine.
-  or
+
+or
+
 - Python 3.12
 
 ### Steps Docker
