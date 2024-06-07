@@ -1,6 +1,8 @@
 # Importing from the modular files of the project
 from github_api import fetch_pull_requests
 from email_console_formatter import format_console_body
+from html_formatter import format_html_body
+from html_generator import generate_html_report
 from config import REPO_OWNER, REPO_NAME, EMAIL_FROM, EMAIL_TO, EMAIL_SUBJECT
 
 def main():
@@ -13,6 +15,8 @@ def main():
 
     # Format the email body with the pull request data
     email_console_body = format_console_body(REPO_NAME, opened_prs, merged_prs, closed_prs)
+    html_body = format_html_body(REPO_NAME, opened_prs, merged_prs, closed_prs)
+    generate_html_report(html_body)
 
     # Printing the email content to console
     print("From:", EMAIL_FROM)
