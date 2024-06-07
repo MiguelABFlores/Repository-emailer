@@ -15,13 +15,13 @@ def main():
     closed_prs = [pr for pr in closed_prs if pr['merged_at'] is None]
 
     # Format the email body with the pull request data
-    console_body = format_console_body(REPO_NAME, opened_prs, merged_prs, closed_prs)
+    email_console_body = format_console_body(REPO_NAME, opened_prs, merged_prs, closed_prs)
 
     # Printing the email content to console
     print("From:", EMAIL_FROM)
     print("To:", EMAIL_TO)
     print("Subject:", EMAIL_SUBJECT)
-    print("\nBody:\n", console_body)
+    print("\nBody:\n", email_console_body)
 
 if __name__ == "__main__":
     main()
