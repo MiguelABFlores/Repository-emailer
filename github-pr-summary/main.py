@@ -1,10 +1,9 @@
 # Importing from the modular files of the project
 from github_api import fetch_pull_requests
-from console_formatter import format_console_body
+from email_console_formatter import format_console_body
 from html_formatter import format_html_body
 from html_generator import generate_html_report
 from config import REPO_OWNER, REPO_NAME, EMAIL_FROM, EMAIL_TO, EMAIL_SUBJECT
-
 
 def main():
     # Fetching the json from the repository and calling the function
