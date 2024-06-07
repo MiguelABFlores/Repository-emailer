@@ -163,3 +163,9 @@ cython_debug/
 
 # Drawio
 *.drawio.bkp
+
+# Ignore the report folder
+report/
+
+# Ignore Python cache directories
+__pycache__/
