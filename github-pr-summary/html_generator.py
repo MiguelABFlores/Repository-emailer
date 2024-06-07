@@ -1,6 +1,6 @@
 import os
 
-def generate_html_report(html_content, report_path='/report/github-pr-summary.html'):
+def generate_html_report(html_content, report_path='report/github-pr-summary.html'):
     # Ensure the directory exists
     os.makedirs(os.path.dirname(report_path), exist_ok=True)
 

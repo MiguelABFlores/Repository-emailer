@@ -16,7 +16,7 @@ def main():
     # Format the email body with the pull request data
     email_console_body = format_console_body(REPO_NAME, opened_prs, merged_prs, closed_prs)
     html_body = format_html_body(REPO_NAME, opened_prs, merged_prs, closed_prs)
-    generate_html_report(html_body)
+    generate_html_report(html_body, report_path='report/github-pr-summary.html')
 
     # Printing the email content to console
     print("From:", EMAIL_FROM)
