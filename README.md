@@ -101,6 +101,11 @@ or
    python3 github-pr-summary/main.py
    ```
 
+# Summary Report
+
+If done the steps correctly you should get an output in the console with relevant information of the repository about pull requests.
+There will be a generated file named "github-pr-summary.html" inside the report folder. You can open the file to read a html generated, it is easier to read and more human friendly. But to open it easily my suggestion is to run with the python interpreter not containerizing it.
+
 # Scheduling
 
 ## Scheduling with a Cronjob
