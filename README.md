@@ -29,6 +29,11 @@ Definition of Done:
 7. **`Dockerfile`**: File used to create the Docker image, it includes everything needed to setting up the Python environment and running the main script.
 8. **`requirements.txt`**: Here are the Python libraries that need to be installed in the Docker image.
 
+# Diagrams for Strategy and Code Structure
+
+![Strategy Diagram](diagrams/repository-emailer-strategy.drawio.png)
+![Code Structure Diagram](diagrams/repository-emailer.drawio.png)
+
 # Prerequisites
 
 - Docker or Rancher installed on your machine.
